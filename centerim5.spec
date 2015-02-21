@@ -47,7 +47,7 @@ Internal RSS reader and a client for LiveJournal are provided.
 
 
 %build
-%configure \
+%configure
 %make
 
 
