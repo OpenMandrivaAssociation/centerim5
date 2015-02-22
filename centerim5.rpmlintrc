@@ -1,0 +1,7 @@
+addFilter('W: shared-lib-calls-exit")
+addFilter('W: not-standard-release-extension")
+addFilter('E: invalid-version") 
+addFilter('E: incoherent-version-in-name") 
+addFilter('E: explicit-lib-dependency") 
+addFilter('E: executable-in-library-package") 
+addFilter('E: devel-file-in-non-devel-package")

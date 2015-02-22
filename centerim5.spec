@@ -15,6 +15,7 @@ URL:            http://www.centerim.org/
 Source0:        http://www.centerim.org/download/cim5/%{name}-%{version}.tar.gz
 Source1:        centerim5.svg
 Source2:        centerim5.desktop
+Source100:	centerim5.rpmlintrc
 
 
 BuildRequires:  pkgconfig(libcurl)
