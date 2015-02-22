@@ -45,10 +45,10 @@ Internal RSS reader and a client for LiveJournal are provided.
 
 %prep
 %setup -q
-
+perl -pi -e "s|ncursesw5-config|ncursesw6-config|" configure
 
 %build
-%configure
+%configure --with-ncursesw-prefix=%{_includedir}/ncursesw
 %make
 
 
@@ -58,11 +58,11 @@ Internal RSS reader and a client for LiveJournal are provided.
 # remove unnecessary stuff
 rm -f %{_libdir}/%{name}/*a
 
-install -d %{buildroot}%{_datadir}/icons
-install -m 644 %{SOURCE1} %{buildroot}%{_datadir}/icons
-desktop-file-install --vendor=fedora                    \
-        --dir=${RPM_BUILD_ROOT}%{_datadir}/applications \
-                %{SOURCE2}
+install -d %{buildroot}%{_iconsdir}
+install -m 644 %{SOURCE1} %{buildroot}%{_iconsdir}
+desktop-file-install \
+	--dir=%{buildroot}%{_desktopdir} \
+    %{SOURCE2}
 
 %find_lang %{name}
 
