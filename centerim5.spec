@@ -1,6 +1,7 @@
 # Import froms Stella7, Thx to Nux.
 %define _desktopdir %{_datadir}/applications
 %define _iconsdir %{_datadir}/icons
+%define debug_package	%{nil}
 
 Name:           centerim5
 Version:        5.0.0beta2
@@ -67,16 +68,18 @@ desktop-file-install \
 	--dir=%{buildroot}%{_desktopdir} \
     %{SOURCE2}
 
+find %{buildroot} -name "*.debug" -delete
+
 %find_lang %{name}
 
 
 %files -f %{name}.lang
 %doc ABOUT-NLS AUTHORS COPYING ChangeLog HACKING NEWS README TODO
-/%{_bindir}/%{name}
-/%{_libdir}/*
-/%{_desktopdir}/*
-/%{_iconsdir}/*
-/%{_mandir}/man1/%{name}.1.gz
+%{_bindir}/%{name}
+%{_libdir}/*
+%{_desktopdir}/*
+%{_iconsdir}/*
+%{_mandir}/man1/%{name}.1.*
 
 %changelog
 * Mon May 05 2014 Nux <rpm@li.nux.ro> - 5.0.0beta2-2
