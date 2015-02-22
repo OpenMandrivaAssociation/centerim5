@@ -26,6 +26,8 @@ BuildRequires:  jpeg-devel
 BuildRequires:  desktop-file-utils
 BuildRequires:  pkgconfig(purple)
 BuildRequires:  pkgconfig(sigc++-2.0)
+BuildRequires:  %{_lib}ncursesw6
+
 
 Requires:       %{_lib}purple0
 Requires:       xdg-utils
@@ -48,7 +50,8 @@ Internal RSS reader and a client for LiveJournal are provided.
 perl -pi -e "s|ncursesw5-config|ncursesw6-config|" configure
 
 %build
-%configure --with-ncursesw-prefix=%{_includedir}/ncursesw
+%configure 
+
 %make
 
 
