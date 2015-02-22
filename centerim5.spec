@@ -17,7 +17,8 @@ Source2:        centerim5.desktop
 
 
 BuildRequires:  pkgconfig(libcurl)
-BuildRequires:  pkgconfig(ncurses) >= 4.2
+BuildRequires:  pkgconfig(ncurses)
+BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  gettext-devel
 BuildRequires:  gpgme-devel
 BuildRequires:  pkgconfig(libssl)
