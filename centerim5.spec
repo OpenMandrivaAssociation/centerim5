@@ -15,7 +15,7 @@ URL:            http://www.centerim.org/
 Source0:        http://www.centerim.org/download/cim5/%{name}-%{version}.tar.gz
 Source1:        centerim5.svg
 Source2:        centerim5.desktop
-Source100:	centerim5.rpmlintrc
+Source100:		centerim5.rpmlintrc
 
 
 BuildRequires:  pkgconfig(libcurl)
@@ -35,11 +35,12 @@ Requires:       %{_lib}purple0
 Requires:       xdg-utils
 
 
-# let's not obsolete anything yet, version 4 still works
-#Provides:       centericq = %{version}
-#Obsoletes:      centericq <= 4
-#Provides:	centerim
-#Obsoletes:	centerim
+%if %{mdvver} >= 201500
+Provides:       centericq = %{EVRD}
+Obsoletes:      centericq <= 4
+Provides:	centerim = %{EVRD}
+Obsoletes:	centerim <= 4
+%endif
 
 %description
 CenterIM5 is a text mode menu and window-driven IM interface that supports
