@@ -11,7 +11,7 @@ Summary:        Text mode menu- and window-driven IM
 
 Group:          Networking/Instant messaging
 License:        GPLv2+
-URL:            http://www.centerim.org/
+URL:            https://www.centerim.org/
 Source0:        http://www.centerim.org/download/cim5/%{name}-%{version}.tar.gz
 Source1:        centerim5.svg
 Source2:        centerim5.desktop
