@@ -18,6 +18,11 @@ Source2:        centerim5.desktop
 Source100:		centerim5.rpmlintrc
 
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(libcurl)
 BuildRequires:  pkgconfig(ncurses)
 BuildRequires:  pkgconfig(ncursesw)
